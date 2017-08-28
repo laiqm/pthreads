@@ -324,7 +324,7 @@ PHP_MINIT_FUNCTION(pthreads)
 	INIT_CLASS_ENTRY(ce, "Socket", pthreads_socket_methods);
 	pthreads_socket_entry = zend_register_internal_class_ex(&ce, pthreads_threaded_entry);
 	pthreads_socket_entry->create_object = pthreads_socket_ctor;
-
+		
 	zend_declare_class_constant_long(pthreads_socket_entry, ZEND_STRL("AF_UNIX"), AF_UNIX);
 	zend_declare_class_constant_long(pthreads_socket_entry, ZEND_STRL("AF_INET"), AF_INET);
 #ifdef HAVE_IPV6
